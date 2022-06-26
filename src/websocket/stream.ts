@@ -2,7 +2,7 @@ import WebSocket, { createWebSocketStream } from 'ws';
 import { controller } from './controllers';
 
 export const createStream = (ws: WebSocket.WebSocket) => {
-  ws.send('Wait_commands\0')
+  ws.send('wait_commands\0')
 
   const duplex = createWebSocketStream(ws, {
     encoding: 'utf-8',
